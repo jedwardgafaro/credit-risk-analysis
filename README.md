@@ -56,13 +56,9 @@ A partire dal dataset **German Credit Dataset**, il progetto costruisce un siste
 ```
 Pipeline completo:
 
-SQL (SQLite)
-├── sqlalchemy          → connessione Python-database
-├── sqlite3             → gestione database locale
-└── 6 query analitiche  → rischio per età, scopo, alloggio, segmentazione
-
-Python 3.10
-├── pandas              → manipolazione dati
+Python 3.10 + SQLite integrato
+├── sqlalchemy          → creazione e gestione database SQLite da Python
+├── pandas              → manipolazione e analisi dati
 ├── numpy               → operazioni numeriche
 ├── matplotlib          → visualizzazioni
 ├── seaborn             → grafici statistici
@@ -81,13 +77,15 @@ Power BI
 └── Visual Design       → 3 pagine interattive
 ```
 
+> **Nota tecnica:** Le query SQL sono state eseguite **all'interno del notebook Python** tramite SQLAlchemy e SQLite. Il file `queries.sql` nella cartella `sql/` è documentazione delle query utilizzate, non un lavoro SQL indipendente.
+
 ---
 
 ## 🔍 Fasi del Progetto
 
-### 1. SQL — Creazione Database e Analisi
-- Creazione database SQLite con sqlalchemy
-- 6 query analitiche: distribuzione rischio, analisi per età, scopo, alloggio, profilo clienti ad alto rischio, segmentazione per importo
+### 1. SQLite integrato in Python — Creazione Database e Analisi
+- Creazione database SQLite tramite sqlalchemy all'interno del notebook Python
+- 6 query analitiche eseguite da Python: distribuzione rischio, analisi per età, scopo, alloggio, profilo clienti ad alto rischio, segmentazione per importo
 
 ### 2. Python — EDA e Feature Engineering
 - Gestione valori nulli con categoria unknown
