@@ -1,0 +1,4 @@
+Modello,Accuracy,ROC-AUC
+Regressione Logistica,73.0,0.766
+Random Forest,75.5,0.775
+Gradient Boosting,76.5,0.78
